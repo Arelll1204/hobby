@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Halaman 1 - Struktur & Teks</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      color: #0F1535;
+    }
+    h1 {
+      color: #1E2761;
+    }
+    nav {
+      background-color: #CADCFC;
+      padding: 10px 20px;
+      margin-bottom: 30px;
+    }
+  </style>
+
+  <script>
+    /* Contoh script internal — dijalankan setelah halaman load */
+    window.onload = function () {
+      var el = document.getElementById("pesan");
+      el.textContent = "Script berjalan! Halaman sudah siap.";
+    };
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigasi antar halaman -->
+  <nav>
+    <a href="halaman1.html">Halaman 1</a> |
+    <a href="halaman2.html">Halaman 2</a> |
+    <a href="halaman3.html">Halaman 3</a>
+  </nav>
+
+  <h1>Halaman 1 — Struktur HTML &amp; Formatting Teks</h1>
+
+  <p id="pesan" style="color: #5A6182; font-style: italic;">Menunggu script...</p>
+
+  <hr />
+
+  <!-- ===================== -->
+  <!-- CONTOH TEXT FORMATTING -->
+  <!-- ===================== -->
+  <h2 style="color: #1E2761;">Contoh Formatting Teks</h2>
+
+  <p>Ini teks biasa tanpa formatting apapun.</p>
+
+  <p>Ini teks dengan tag <b>bold (&lt;b&gt;)</b> — tebal visual saja.</p>
+
+  <p>Ini teks dengan tag <strong>strong (&lt;strong&gt;)</strong> — tebal dan bermakna semantik penting.</p>
+
+  <p>Ini teks dengan tag <i>italic (&lt;i&gt;)</i> — miring visual, cocok untuk judul buku atau istilah asing.</p>
+
+  <p>Ini teks dengan tag <em>emphasis (&lt;em&gt;)</em> — miring dan bermakna penekanan semantik.</p>
+
+  <p>Ini teks dengan tag <u>underline (&lt;u&gt;)</u> — bergaris bawah, hati-hati dikira link.</p>
+
+  <p>Ini teks dengan tag <mark>mark (&lt;mark&gt;)</mark> — highlight seperti stabilo.</p>
+
+  <p>
+    Semua digabung: <b>bold</b>, <strong>strong</strong>,
+    <i>italic</i>, <em>em</em>, <u>underline</u>, <mark>mark</mark>.
+  </p>
+
+  <hr />
+
+  <!-- ===================== -->
+  <!-- CONTOH INLINE STYLING  -->
+  <!-- ===================== -->
+  <h2 style="color: #1E2761;">Contoh Inline Styling — Font &amp; Warna</h2>
+
+  <p style="font-family: 'font1', Arial, sans-serif; font-size: 20px; color: #C44545;">
+    Teks ini pakai font1.ttf, ukuran 20px, warna merah.
+  </p>
+
+  <p style="font-family: 'font2', Georgia, serif; font-size: 16px; color: #5EA854; font-weight: bold;">
+    Teks ini pakai font2.ttf, ukuran 16px, warna hijau, tebal.
+  </p>
+
+  <p style="font-family: 'font3', Courier, monospace; font-size: 14px; color: #1E2761; font-style: italic;">
+    Teks ini pakai font3.ttf, ukuran 14px, warna navy, miring.
+  </p>
+
+  <p style="background-color: #CADCFC; padding: 12px 20px; margin: 16px 0; border-radius: 8px;">
+    Paragraf dengan background-color, padding, margin, dan border-radius.
+  </p>
+
+  <p style="color: #F2C94C; background-color: #1E2761; padding: 10px; font-size: 18px; font-family: Arial;">
+    Teks kuning di atas background navy — contoh kontras warna.
+  </p>
+
+  <hr />
+
+  <p style="color: #5A6182; font-size: 13px;">
+    Lanjut ke <a href="halaman2.html">Halaman 2 — Link &amp; Gambar</a>
+  </p>
+
+</body>
+</html>
