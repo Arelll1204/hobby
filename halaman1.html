@@ -1,107 +1,92 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Halaman 1 - Struktur & Teks</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman 1 - Daftar Hobi Kelas (Draft)</title>
   <style>
+    /* Styling dasar yang dibuat buru-buru */
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      color: #0F1535;
+      margin: 20px;
+      background-color: #f0f2f5;
     }
-    h1 {
-      color: #1E2761;
-    }
+
     nav {
       background-color: #CADCFC;
-      padding: 10px 20px;
-      margin-bottom: 30px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #1E2761;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    /* Card hobi simpel */
+    .hobi-item {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .hobi-title {
+      color: #1E2761;
+      margin: 0 0 5px 0;
     }
   </style>
-
-  <script>
-    /* Contoh script internal — dijalankan setelah halaman load */
-    window.onload = function () {
-      var el = document.getElementById("pesan");
-      el.textContent = "Script berjalan! Halaman sudah siap.";
-    };
-  </script>
 </head>
-
 <body>
 
-  <!-- Navigasi antar halaman -->
+  <!-- Navigasi -->
   <nav>
     <a href="halaman1.html">Halaman 1</a> |
     <a href="halaman2.html">Halaman 2</a> |
     <a href="halaman3.html">Halaman 3</a>
   </nav>
 
-  <h1>Halaman 1 — Struktur HTML &amp; Formatting Teks</h1>
+  <h1>Daftar Hobi Kelas (Progress Baru 4 Orang)</h1>
+  <p>Baru sempat input beberapa data dari contoh.txt karena waktu terbatas:</p>
 
-  <p id="pesan" style="color: #5A6182; font-style: italic;">Menunggu script...</p>
+  <div id="daftar-hobi">
+    <div class="hobi-item">
+      <h3 class="hobi-title">1. Febru - Mancing</h3>
+      <p>Hobi memancing ikan untuk melatih kesabaran.</p>
+    </div>
 
-  <hr />
+    <div class="hobi-item">
+      <h3 class="hobi-title">2. Rizal - Jogging</h3>
+      <p>Suka olahraga lari santai sore-sore biar sehat.</p>
+    </div>
 
-  <!-- ===================== -->
-  <!-- CONTOH TEXT FORMATTING -->
-  <!-- ===================== -->
-  <h2 style="color: #1E2761;">Contoh Formatting Teks</h2>
+    <div class="hobi-item">
+      <h3 class="hobi-title">3. Seemon - Rakit Gundam</h3>
+      <p>Merakit robot plastic model Gundam (Gunpla).</p>
+    </div>
 
-  <p>Ini teks biasa tanpa formatting apapun.</p>
+    <div class="hobi-item">
+      <h3 class="hobi-title">4. Doa - Rakit PC</h3>
+      <p>Hobi merakit dan modifikasi komponen komputer.</p>
+  </div>
 
-  <p>Ini teks dengan tag <b>bold (&lt;b&gt;)</b> — tebal visual saja.</p>
-
-  <p>Ini teks dengan tag <strong>strong (&lt;strong&gt;)</strong> — tebal dan bermakna semantik penting.</p>
-
-  <p>Ini teks dengan tag <i>italic (&lt;i&gt;)</i> — miring visual, cocok untuk judul buku atau istilah asing.</p>
-
-  <p>Ini teks dengan tag <em>emphasis (&lt;em&gt;)</em> — miring dan bermakna penekanan semantik.</p>
-
-  <p>Ini teks dengan tag <u>underline (&lt;u&gt;)</u> — bergaris bawah, hati-hati dikira link.</p>
-
-  <p>Ini teks dengan tag <mark>mark (&lt;mark&gt;)</mark> — highlight seperti stabilo.</p>
-
-  <p>
-    Semua digabung: <b>bold</b>, <strong>strong</strong>,
-    <i>italic</i>, <em>em</em>, <u>underline</u>, <mark>mark</mark>.
-  </p>
-
-  <hr />
-
-  <!-- ===================== -->
-  <!-- CONTOH INLINE STYLING  -->
-  <!-- ===================== -->
-  <h2 style="color: #1E2761;">Contoh Inline Styling — Font &amp; Warna</h2>
-
-  <p style="font-family: 'font1', Arial, sans-serif; font-size: 20px; color: #C44545;">
-    Teks ini pakai font1.ttf, ukuran 20px, warna merah.
-  </p>
-
-  <p style="font-family: 'font2', Georgia, serif; font-size: 16px; color: #5EA854; font-weight: bold;">
-    Teks ini pakai font2.ttf, ukuran 16px, warna hijau, tebal.
-  </p>
-
-  <p style="font-family: 'font3', Courier, monospace; font-size: 14px; color: #1E2761; font-style: italic;">
-    Teks ini pakai font3.ttf, ukuran 14px, warna navy, miring.
-  </p>
-
-  <p style="background-color: #CADCFC; padding: 12px 20px; margin: 16px 0; border-radius: 8px;">
-    Paragraf dengan background-color, padding, margin, dan border-radius.
-  </p>
-
-  <p style="color: #F2C94C; background-color: #1E2761; padding: 10px; font-size: 18px; font-family: Arial;">
-    Teks kuning di atas background navy — contoh kontras warna.
-  </p>
-
-  <hr />
-
-  <p style="color: #5A6182; font-size: 13px;">
-    Lanjut ke <a href="halaman2.html">Halaman 2 — Link &amp; Gambar</a>
-  </p>
+  <!-- Script sederhana untuk load data dari LocalStorage -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var container = document.getElementById("daftar-hobi");
+      var hobbies = JSON.parse(localStorage.getItem("localHobbies")) || [];
+      
+      hobbies.forEach(function(item) {
+        var card = document.createElement("div");
+        card.className = "hobi-item";
+        card.innerHTML = "<h3 class='hobi-title'>" + (container.children.length + 1) + ". " + item.nama + " - " + item.hobi + "</h3><p>Hobi tambahan baru dari Halaman 3.</p>";
+        container.appendChild(card);
+      });
+    });
+  </script>
 
 </body>
 </html>

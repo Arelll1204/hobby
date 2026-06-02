@@ -1,129 +1,66 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Halaman 2 - Link & Gambar</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman 2 - Eksplorasi (Draft)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      color: #0F1535;
+      margin: 20px;
+      background-color: #f0f2f5;
     }
-    h1 {
-      color: #1E2761;
-    }
+
     nav {
       background-color: #CADCFC;
-      padding: 10px 20px;
-      margin-bottom: 30px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #1E2761;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .box {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Navigasi antar halaman -->
   <nav>
     <a href="halaman1.html">Halaman 1</a> |
     <a href="halaman2.html">Halaman 2</a> |
     <a href="halaman3.html">Halaman 3</a>
   </nav>
 
-  <h1>Halaman 2 — Link &amp; Gambar</h1>
+  <h1>Detail Hobi &amp; Gambar (Baru Selesai 2 Bagian)</h1>
 
-  <hr />
+  <div class="box">
+    <h2>1. Hobi Memancing (Febru)</h2>
+    <p>Melatih fokus dan kesabaran di luar ruangan.</p>
+    <img src="img1.png" alt="Mancing" width="200" style="border: 2px solid #1E2761;" />
+    <ul>
+      <li>Tips: Siapkan umpan cacing atau pelet.</li>
+      <li>Cari tempat yang tenang.</li>
+    </ul>
+  </div>
 
-  <!-- ===================== -->
-  <!-- CONTOH TAG <a>         -->
-  <!-- ===================== -->
-  <h2 style="color: #1E2761;">Contoh Tag &lt;a&gt; — Hyperlink</h2>
-
-  <!-- Link ke halaman lain dalam project -->
-  <p>
-    Link ke halaman lain (internal):
-    <a href="halaman1.html">Pergi ke Halaman 1</a>
-  </p>
-
-  <p>
-    Link ke halaman lain (internal):
-    <a href="halaman3.html">Pergi ke Halaman 3</a>
-  </p>
-
-  <!-- Link eksternal, buka di tab baru -->
-  <p>
-    Link eksternal, buka di tab baru:
-    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Buka Google ↗</a>
-  </p>
-
-  <!-- Link anchor ke bagian bawah halaman ini -->
-  <p>
-    Link anchor ke bagian bawah halaman ini:
-    <a href="#bagian-gambar">Loncat ke bagian Gambar ↓</a>
-  </p>
-
-  <!-- Link e-mail -->
-  <p>
-    Link e-mail:
-    <a href="mailto:contoh@email.com">Kirim email ke contoh@email.com</a>
-  </p>
-
-  <!-- Link download -->
-  <p>
-    Link download:
-    <a href="img1.png" download="download-gambar.png">Download img1.png</a>
-  </p>
-
-  <hr />
-
-  <!-- ===================== -->
-  <!-- CONTOH TAG <img>       -->
-  <!-- ===================== -->
-  <h2 id="bagian-gambar" style="color: #1E2761;">Contoh Tag &lt;img&gt; — Gambar</h2>
-
-  <!-- Gambar normal dengan width dan height -->
-  <p>Gambar img1.png, lebar 200px:</p>
-  <img src="img1.png" alt="Contoh gambar pertama" width="200" height="150" />
-
-  <br /><br />
-
-  <!-- Gambar dengan inline style -->
-  <p>Gambar img2.png, ukuran via inline style, dengan border:</p>
-  <img
-    src="img2.png"
-    alt="Contoh gambar kedua"
-    style="width: 250px; height: auto; border: 3px solid #1E2761;"
-  />
-
-  <br /><br />
-
-  <!-- Gambar dengan lazy loading -->
-  <p>Gambar img3.png, loading lazy, border-radius bulat:</p>
-  <img
-    src="img3.png"
-    alt="Contoh gambar ketiga"
-    loading="lazy"
-    style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;"
-  />
-
-  <br /><br />
-
-  <!-- Gambar dekoratif — alt kosong -->
-  <p>Gambar dekoratif (alt dikosongkan, bukan dihapus):</p>
-  <img src="img1.png" alt="" style="width: 80px; opacity: 0.4;" />
-
-  <!-- Gambar yang sengaja salah src supaya alt terlihat -->
-  <br /><br />
-  <p>Contoh gambar gagal load — alt ditampilkan sebagai fallback:</p>
-  <img src="gambar-tidak-ada.png" alt="Gambar ini gagal dimuat" width="200" height="100" />
-
-  <hr />
-
-  <p style="color: #5A6182; font-size: 13px;">
-    Lanjut ke <a href="halaman3.html">Halaman 3 — Inline Styling Lengkap</a>
-  </p>
+  <div class="box">
+    <h2>2. Merakit PC (Doa)</h2>
+    <p>Menyusun komponen hardware komputer hingga menyala.</p>
+    <img src="img2.png" alt="Rakit PC" width="200" style="border: 2px solid #1E2761;" />
+    <ul>
+      <li>Tips: Cek kompatibilitas RAM dan Motherboard.</li>
+      <li>Gunakan gelang antistatis jika ada.</li>
+    </ul>
+  </div>
 
 </body>
 </html>
