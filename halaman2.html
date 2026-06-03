@@ -3,6 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman 2 - Daftar Hobi (Draft)</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:20px; background-color:#f0f2f5;}
+    nav {background-color:#CADCFC; padding:10px; margin-bottom:20px;}
+    nav a {color:#1E2761; text-decoration:none; font-weight:bold; margin-right:15px;}
+    .hobi-item {background:white; border:1px solid #ccc; padding:15px; margin-bottom:10px; border-radius:5px;}
+    .hobi-title {color:#1E2761; margin:0 0 5px 0;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="halaman1.html">Halaman 1</a> |
+    <a href="halaman2.html">Halaman 2</a> |
+    <a href="halaman3.html">Halaman 3</a>
+  </nav>
+  <h1>Daftar Hobi Kelas</h1>
+  <div id="daftar-hobi">
+    <div class="hobi-item">
+      <h3 class="hobi-title">1. Bagong - Ngising</h3>
+      <p>Hobi ngising.</p>
+    </div>
+    <div class="hobi-item">
+      <h3 class="hobi-title">2. Bleki - Bermain guitar</h3>
+      <p>Suka bermain guitar.</p>
+    </div>
+    <div class="hobi-item">
+      <h3 class="hobi-title">3. Mulyono - Badminton</h3>
+      <p>Senang bermaain raket.</p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var container = document.getElementById("daftar-hobi");
+      var hobbies = JSON.parse(localStorage.getItem("localHobbies")) || [];
+      hobbies.forEach(function (item) {
+        var card = document.createElement("div");
+        card.className = "hobi-item";
+        card.innerHTML = "<h3 class='hobi-title'>" + (container.children.length + 1) + ". " + item.nama + " - " + item.hobi + "</h3><p>Hobi tambahan baru dari Halaman 3.</p>";
+        container.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Halaman 2 - Eksplorasi (Draft)</title>
   <style>
     body {
