@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,6 +41,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigasi -->
@@ -49,44 +51,39 @@
     <a href="halaman3.html">Halaman 3</a>
   </nav>
 
-  <h1>Daftar Hobi Kelas (Progress Baru 4 Orang)</h1>
-  <p>Baru sempat input beberapa data dari contoh.txt karena waktu terbatas:</p>
-
+  <h1>Daftar Hobi Kelas</h1>
   <div id="daftar-hobi">
     <div class="hobi-item">
-      <h3 class="hobi-title">1. Febru - Mancing</h3>
-      <p>Hobi memancing ikan untuk melatih kesabaran.</p>
+      <h3 class="hobi-title">1. Bagong - Ngising</h3>
+      <p>Hobi ngising.</p>
     </div>
 
     <div class="hobi-item">
-      <h3 class="hobi-title">2. Rizal - Jogging</h3>
-      <p>Suka olahraga lari santai sore-sore biar sehat.</p>
+      <h3 class="hobi-title">2. Bleki - Bermain guitar</h3>
+      <p>Suka bermain guitar.</p>
     </div>
 
     <div class="hobi-item">
-      <h3 class="hobi-title">3. Seemon - Rakit Gundam</h3>
-      <p>Merakit robot plastic model Gundam (Gunpla).</p>
+      <h3 class="hobi-title">3. Mulyono - Badminton</h3>
+      <p>senang bermaain raket.</p>
     </div>
 
-    <div class="hobi-item">
-      <h3 class="hobi-title">4. Doa - Rakit PC</h3>
-      <p>Hobi merakit dan modifikasi komponen komputer.</p>
-  </div>
 
-  <!-- Script sederhana untuk load data dari LocalStorage -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var container = document.getElementById("daftar-hobi");
-      var hobbies = JSON.parse(localStorage.getItem("localHobbies")) || [];
-      
-      hobbies.forEach(function(item) {
-        var card = document.createElement("div");
-        card.className = "hobi-item";
-        card.innerHTML = "<h3 class='hobi-title'>" + (container.children.length + 1) + ". " + item.nama + " - " + item.hobi + "</h3><p>Hobi tambahan baru dari Halaman 3.</p>";
-        container.appendChild(card);
+    <!-- Script sederhana untuk load data dari LocalStorage -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var container = document.getElementById("daftar-hobi");
+        var hobbies = JSON.parse(localStorage.getItem("localHobbies")) || [];
+
+        hobbies.forEach(function (item) {
+          var card = document.createElement("div");
+          card.className = "hobi-item";
+          card.innerHTML = "<h3 class='hobi-title'>" + (container.children.length + 1) + ". " + item.nama + " - " + item.hobi + "</h3><p>Hobi tambahan baru dari Halaman 3.</p>";
+          container.appendChild(card);
+        });
       });
-    });
-  </script>
+    </script>
 
 </body>
+
 </html>
