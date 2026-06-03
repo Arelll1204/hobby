@@ -10,14 +10,13 @@
     nav a {color:#1E2761; text-decoration:none; font-weight:bold; margin-right:15px;}
     .hobi-item {background:white; border:1px solid #ccc; padding:15px; margin-bottom:10px; border-radius:5px;}
     .hobi-title {color:#1E2761; margin:0 0 5px 0;}
-    .quote {background-color:#fff; padding:10px; margin-bottom:10px; border-left:4px solid #1E2761;}
-    .form-box {background-color:white; padding:15px; border:1px solid #ccc; margin-top:20px;}
+    .quote {background:#fff; padding:10px; margin-bottom:10px; border-left:4px solid #1E2761;}
+    .form-box {background:#fff; padding:15px; border:1px solid #ccc; margin-top:20px;}
     .input-field {margin-bottom:10px;}
   </style>
 </head>
 <body>
   <nav>
-    <a href="halaman1.html">Halaman 1</a> |
     <a href="halaman2.html">Halaman 2</a> |
     <a href="halaman3.html">Halaman 3</a>
   </nav>
@@ -60,16 +59,18 @@
     </form>
   </div>
   <script>
+    // Form handling – store to LocalStorage
     document.getElementById("simpleForm").addEventListener("submit", function(e) {
       e.preventDefault();
       var nama = document.getElementById("inputNama").value.trim();
       var hobi = document.getElementById("inputHobi").value.trim();
       var hobbies = JSON.parse(localStorage.getItem("localHobbies")) || [];
-      hobbies.push({ nama: nama, hobi: hobi });
+      hobbies.push({nama: nama, hobi: hobi});
       localStorage.setItem("localHobbies", JSON.stringify(hobbies));
       alert("Hobi baru milik " + nama + " berhasil ditambahkan! Silakan cek Halaman 1 (Beranda) untuk melihat hasilnya.");
       document.getElementById("simpleForm").reset();
     });
+    // Load stored hobbies into the list
     document.addEventListener("DOMContentLoaded", function () {
       var container = document.getElementById("daftar-hobi");
       var hobbies = JSON.parse(localStorage.getItem("localHobbies")) || [];
@@ -81,106 +82,5 @@
       });
     });
   </script>
-</body>
-</html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halaman 3 - Aspirasi (Draft)</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f0f2f5;
-    }
-
-    nav {
-      background-color: #CADCFC;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      color: #1E2761;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 15px;
-    }
-
-    .quote {
-      background-color: #fff;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-left: 4px solid #1E2761;
-    }
-
-    .form-box {
-      background-color: white;
-      padding: 15px;
-      border: 1px solid #ccc;
-      margin-top: 20px;
-    }
-
-    .input-field {
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a href="halaman1.html">Halaman 1</a> |
-    <a href="halaman2.html">Halaman 2</a> |
-    <a href="halaman3.html">Halaman 3</a>
-  </nav>
-
-  <h1>Aspirasi Kelas &amp; Form Input Hobi</h1>
-
-  <!-- Aspirasi baru input 2 orang -->
-  <div class="quote">
-    <strong>Ivan - Orang Sukses</strong><br>
-    "Belajar giat dan konsisten demi mencapai impian masa depan."
-  </div>
-
-  <div class="quote">
-    <strong>Nurman - Backend Lover</strong><br>
-    "Fokus belajar logika web server, database relasional, dan coding backend."
-  </div>
-
-  <!-- Form Hobi Sederhana -->
-  <div class="form-box">
-    <h3>Tambah Hobi Baru</h3>
-    <form id="simpleForm">
-      <div class="input-field">
-        <label>Nama: </label>
-        <input type="text" id="inputNama" required />
-      </div>
-      <div class="input-field">
-        <label>Hobi: </label>
-        <input type="text" id="inputHobi" required />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-  <!-- JavaScript Sederhana -->
-  <script>
-    document.getElementById("simpleForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      
-      var nama = document.getElementById("inputNama").value.trim();
-      var hobi = document.getElementById("inputHobi").value.trim();
-      
-      // Simpan ke LocalStorage
-      var hobbies = JSON.parse(localStorage.getItem("localHobbies")) || [];
-      hobbies.push({ nama: nama, hobi: hobi });
-      localStorage.setItem("localHobbies", JSON.stringify(hobbies));
-      
-      alert("Hobi baru milik " + nama + " berhasil ditambahkan! Silakan cek Halaman 1 (Beranda) untuk melihat hasilnya.");
-      document.getElementById("simpleForm").reset();
-    });
-  </script>
-
 </body>
 </html>
